@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: text-generation-inference
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/shebert-tenant/kserve/text-generation-inference@sha256:5fe05357b68dbefca8398b59277578d7d772a90cf57cf280c21621fccec87ce4
+        name: container-image
+        resources: {}
+status: {}
